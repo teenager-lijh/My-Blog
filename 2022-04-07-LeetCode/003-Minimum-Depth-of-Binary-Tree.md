@@ -14,7 +14,7 @@
 
 **举个例子**
 
-![img](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/ex_depth.jpg)
+![img](003-Minimum-Depth-of-Binary-Tree.assets/ex_depth.jpg)
 
 **最小深度的定义**
 
@@ -44,7 +44,7 @@
 
 层次遍历的过程需要一个队列作为辅助的数据结构，在以下的图中，我使用一个箭头代表队列的对头方向，初始情况下队列是空的。
 
-![image-20220407133123958](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220407133123958.png)
+![image-20220407133123958](003-Minimum-Depth-of-Binary-Tree.assets/image-20220407133123958.png)
 
 **如何访问节点**
 
@@ -54,7 +54,7 @@
 
 **1 访问第 1 层的节点**
 
-![image-20220407133608515](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220407133608515.png)
+![image-20220407133608515](003-Minimum-Depth-of-Binary-Tree.assets/image-20220407133608515.png)
 
 先让根节点入队，其中我用绿色箭头指向队列的头节点。接着，如果我们直接访问队头节点并且让此节点出队的话，那么后边就不知道该访问谁了，那么你发现了嘛，下一层的节点刚好就是队头节点的左孩子和右孩子，此时，当我们访问队头节点的时候顺便让它的左孩子和右孩子入队即可。
 
@@ -62,7 +62,7 @@
 
 并且这时候也可以放心地把头节点从队列中删除掉，然后头节点就变成了节点 9。
 
-![image-20220407133904419](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220407133904419.png)
+![image-20220407133904419](003-Minimum-Depth-of-Binary-Tree.assets/image-20220407133904419.png)
 
 **到这里思考一个问题**
 
@@ -76,7 +76,7 @@
 
 这时，把节点 9 从队列中去除，接着访问新的队头节点：
 
-![image-20220407134549865](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220407134549865.png)
+![image-20220407134549865](003-Minimum-Depth-of-Binary-Tree.assets/image-20220407134549865.png)
 
 依然是按照刚才的套路，访问节点 **20** 再将节点 **20** 的左孩子和右孩子入队。
 
@@ -84,17 +84,17 @@
 
 访问节点 15
 
-![image-20220407134711844](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220407134711844.png)
+![image-20220407134711844](003-Minimum-Depth-of-Binary-Tree.assets/image-20220407134711844.png)
 
 访问节点 7
 
-![image-20220407134805349](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220407134805349.png)
+![image-20220407134805349](003-Minimum-Depth-of-Binary-Tree.assets/image-20220407134805349.png)
 
 **结束**
 
 当我们访问完成所有的节点后，你会发现队列也变成了空。所以，判断层次遍历是否完成的条件就是判断队列是为空。若队列为空则遍历结束。
 
-![image-20220407134915993](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220407134915993.png)
+![image-20220407134915993](003-Minimum-Depth-of-Binary-Tree.assets/image-20220407134915993.png)
 
 
 
