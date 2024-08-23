@@ -23,7 +23,7 @@
 
 那么拨轮锁是什么东西呢，你可以脑补一下你行李箱上的那个锁子，可以拨动那个轮子然后转换成不同的数字。我简单画了一张图，可以参考下：
 
-![image-20220408222015006](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220408222015006.png)
+![image-20220408222015006](0752-Open-The-Lock.assets/image-20220408222015006.png)
 
 画图水平有限，只能画成这个样子了，绿色表示的是第几号波轮，再看绿色的圈圈中的数值就是指当前转到的密码是什么。如上图就是 **0000**
 
@@ -65,7 +65,7 @@
 
 其实整个求解过程就是图的广度优先遍历，每个节点都会有 8 个相邻的节点，我只画出了很小的一部分，
 
-![image-20220409123733442](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220409123733442.png)
+![image-20220409123733442](0752-Open-The-Lock.assets/image-20220409123733442.png)
 
 顺便再来理解一下题目中的 **deadends**
 
@@ -73,7 +73,7 @@
 
 其实它想表达的意思就是我们不能够通过节点 **0008** 来访问节点 **0007**
 
-![image-20220409124029996](https://kuku-resources.oss-cn-beijing.aliyuncs.com/images/image-20220409124029996.png)
+![image-20220409124029996](0752-Open-The-Lock.assets/image-20220409124029996.png)
 
 **初始化注意的问题**
 
